@@ -1,0 +1,33 @@
+<html?>
+    <head>
+        <title> Demo One</title>
+
+    </head>
+    <body>
+         
+        <script>
+        var now = new Date();
+        var weekday = new Array(7);
+        weekday[0] = "Sunday";
+        weekday[1] = "Monday";
+        weekday[2] = "Tuesday";
+        weekday[3] = "Wednesday";
+        weekday[4] = "Thursday";
+        weekday[5] = "Friday";
+        weekday[6] = "Saturday";
+
+        var n = weekday[now.getDay()];
+        document.write("Today is : "+n);
+        document.write("<br>");
+
+        var hours = now.getHours(), minutes = now.getMinutes() , seconds =now.getSeconds(); 
+        var ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        hours = hours < 10 ? '0' + hours : hours;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        var timewithampm = hours +" "+ ampm+ ' : ' + minutes + ' : ' + seconds;
+        document.write("Current time is : "+timewithampm);
+        </script>
+    </body>
+</html>
