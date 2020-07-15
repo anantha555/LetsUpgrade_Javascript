@@ -1,0 +1,59 @@
+<!-- Question 2 :
+Write the difference between var, let and const with code examples. -->
+
+<!-- 
+1. var declarations are globally scoped or function scoped; 
+   let and const are block scoped;
+2. var variables can be updated and re-declared within its scope; 
+   let variables can be updated but not re-declared; 
+   const variables can neither be updated nor re-declared;
+3. They are all hoisted to the top of their scope;
+   But while var variables are initialized with undefined;
+   let and const variables are not initialized;
+4. var and let can be declared without being initialized;
+   const must be initialized during declaration; 
+-->
+
+<!-- Enable each example induviuallyy to see the demo  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document q2</title>
+</head>
+<body>
+    <h1>
+        This is Q2
+    </h1>
+    <script>
+        
+    // demo 1
+    var test = "hey hi";
+    function newFunction() { 
+        var hello = "hello"; 
+    }
+    console.log(hello); // error: hello is not defined
+
+    //  demo 2
+    console.log (greeter);// greeter is undefined
+    var greeter = "say hello"
+
+    // demo 3 
+    let times = 4;
+    if (times > 3) {
+        let hello1 = "say Hello instead";
+        console.log(hello1);// "say Hello instead"
+    }
+    console.log(hello1) // hello is not defined
+    // demo 4
+    const greeting = "say Hi";
+    greeting = "say Hello instead";// error: Assignment to constant variable.   
+    /// demo 5
+    const greeting1 = {
+        words: "Hello",
+        number: "five"
+    } // error:  Assignment to constant variable.
+    </script>
+</body>
+</html>

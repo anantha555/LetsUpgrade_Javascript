@@ -1,0 +1,49 @@
+<!-- Question 1 :
+Explore and explain the various methods in console function
+Explain them
+Ex. console.log()
+console.warn().
+etc... -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document q1</title>
+</head>
+<body>
+</body>
+<p>
+    This  is a sample 
+</p>
+    <script>
+        let a = "anantha";
+        // to display message or variables on console 
+        console.log("1st console method");
+        // to log warning message       
+        console.warn("this is warning ");
+        // to log error message 
+        console.error("this is error message");
+        // to clear the console.
+        console.clear();
+        //o know the amount of time for execuation 
+        console.time("time1"); 
+        console.log('fun is running'); 
+        console.log('fun2 is running..'); 
+        console.timeEnd("time1");
+        // to make a table inside a console
+        console.table({'a':1, 'b':2}); 
+        // to groups log in categories ...just 
+        console.group('group1'); 
+        console.warn('warning!'); 
+        console.error('error here'); 
+        console.log('inside group'); 
+        console.groupEnd('group1');
+        //
+        // Custom Console log with css elements we use %c 
+        console.log('%cnew message', "background-color : red; color: green;");
+    </script>
+
+   
+</body>
+</html>
