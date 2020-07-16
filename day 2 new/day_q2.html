@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+</head>
+<body>
+    <h1>Question 2:</h1>
+    <p>
+        Explain with examples the remaining methods of String and Array
+    </p>
+    <script>
+       console.log("String Methods");
+       let a = 'Anantha';
+       console.log('tess string is :',a)
+       // to extract a substring of 4 chars from position 2  
+       console.log(a.substr(2,4));
+       // to extract a substring from position 2  upto postion 4
+       console.log(a.substring(2,4));
+       console.log(a.substring(5));
+       //to extract a substring from position 2  upto postion 4 
+       console.log(a.slice(2,4));
+       //re placce 1st specified char with amnother char
+       console.log(a.replace('a','b'));
+       //number of copies to append
+       console.log(a.repeat(3));
+
+       console.log("Array Methods");
+       let arr = [12,2,4,32,84,1];
+       console.log(arr.sort());
+       let arr1 = [1,2,'a','u',[3,6]];
+       console.log(arr1.pop());
+       let arr2 = [1,2,'a','u',[3,6]];
+       console.log(arr2.push("test"));
+       console.log(arr2)
+
+
+       
+
+    </script>
+</body>
+</html>
