@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 4</title>
+</head>
+<body>
+    <h1>Question 4</h1>
+    <p> 
+        Make a Calculator in Javascript which can do operations as Addtion, Subtraction, Multiplication, Division, Square root, Percentage.
+    </p>
+    <script>
+        let inputOpearation = prompt("Enter a calculator operation:\n 1 for Addtion\n 2 for Subtraction\n 3 for Multiplication \n 4 for Division\n 5 for Square root\n 6 for Percentage.");
+        console.log(inputOpearation);
+        switch (+inputOpearation){
+                case 1:
+                    console.log(`Sum = ${+prompt('Enter number 1:')+ +prompt('Enter number 2:')} `);
+                    break;
+                case 2:
+                    console.log(`Diffrence = ${+prompt('Enter number 1:')- +prompt('Enter number 2:')} `);
+                    break;
+                case 3:
+                    console.log(`Product = ${+prompt('Enter number 1:')* +prompt('Enter number 2:')} `);
+                    break; 
+                case 4:
+                    console.log(`Divison = ${+prompt('Enter number 1:')/ +prompt('Enter number 2:')} `);;
+                    break;
+                case 5:
+                    console.log(`Square root = ${Math.sqrt(+prompt('Enter number to find Square root :'))}`);
+                    break;
+                case 6:
+                    let v = +prompt('Enter value:');
+                    let tv = +prompt('Enter total value:');
+                    console.log(`Percentage of ${v} by ${tv} per hundred = ${v/tv*100} %`);
+                    break; 
+                default:
+                    console.log(`UNKNOWN OPERATION`);
+                    break;     
+            }
+    </script>
+</body>
+</html>

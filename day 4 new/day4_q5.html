@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 5</title>
+</head>
+<body>
+    <h1>Question 5</h1>
+    <p> 
+        You are managing a sales department for your company, you want to reward your employees based on the sales made by them during the year. <br> <br>
+        The criteria is as follows: <br>
+        <ol>
+            <li>Sales from 0-5000 : 2%</li>
+            <li>Sales from 5001 - 10000 : 5%</li>
+            <li>Sales from 10001 - 20000 : 7%</li>
+            <li>Above 20000 - 10%</li>
+        </ol>
+        Then log the total commission earned by him.
+    </p>
+    <script>
+        let saleAmt = prompt("Enter total sales made by employee this year:")
+        reward = (saleAmt > 20000) ? saleAmt/100*10 :
+                (saleAmt >= 10001 && saleAmt <= 20000) ? saleAmt/100*7:
+                (saleAmt >= 5001 && saleAmt <= 10000) ? saleAmt/100*5:
+                (saleAmt >= 0 && saleAmt <= 5000) ? saleAmt/100*2:  
+                0;
+        console.log(`Total sales made is ${saleAmt} and total commission is ${reward}`);
+    </script>
+</body>
+</html>

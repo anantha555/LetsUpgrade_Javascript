@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+</head>
+<body>
+    <h1>Question 2</h1>
+    <p>
+        Destructure the following object <br>
+        const student ={ <br>
+            name: "Helsinki",
+            age : 24,
+            projects: {
+                diceGame: "Two player dice game using JavaScript"
+            }
+        <br>
+        }
+
+    </p>
+    <script>
+        const student ={ 
+            name: "Helsinki",
+            age : 24,
+            projects: {
+                diceGame: "Two player dice game using JavaScript"
+            }
+        }
+        console.log("Normal Way:");
+        console.log(student.name);
+        console.log(student.age);
+        console.log(student.projects.diceGame);
+        console.log("Destructure Way:");
+        const{name,age, projects:{diceGame}} = student;
+        console.log(name);
+        console.log(age);
+        console.log(diceGame);
+
+        
+        
+
+       
+    </script>
+</body>
+</html>
