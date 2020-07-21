@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+</head>
+<body>
+    <h1>Question 2</h1>
+    <p> 
+        Create a Class User with properties as name, age & email. <br>
+        He can login and logout <br>
+        Create another class Moderator which has all the features of User, plus additional functionality to Add
+        coins and remove coins. <br>
+        Create one more class Admin which has all the features of Moderator plus additional features like add a
+        Course and delete a particular course for a user.
+    </p>
+    <script>
+        console.log("q2 solution"); 
+        class User {
+        constructor(name, age,email) {
+            this.name = name;
+            this.age = age;
+            this.email = email;
+            this.luCoins = 0;
+            this.courses = [];
+            }
+            login(){
+                console.log(`${this.name} has logged in`);
+                return this;
+            }
+            logout(){
+                console.log(`${this.name} has logged out`);
+                return this;
+            }
+
+        }
+
+        class Moderator extends User{
+
+            addCoins(user,luCoins){ 
+                user.luCoins+= this.luCoins= luCoins;
+                console.log(`${user.name} has ${user.luCoins} coins`);
+                return this;
+            }
+            removeCoins(user,luCoins){
+                user.luCoins-= this.luCoins= luCoins
+                console.log(`${user.name} has ${user.luCoins} coins`);
+                return this;
+            }
+
+        }
+
+        class Admin extends Moderator{
+            addCourse(user,course){
+                user.courses.push(course);
+                console.log(user.courses);
+            }
+
+            deleteCourse(user,course){
+                for (var i = 0; i < user.courses.length; i++) { 
+                    if (user.courses[i] == course) { 
+                        var spliced = user.courses.splice(i, 1); 
+                    } 
+                    }  
+                console.log(user.courses); 
+            }
+        }
+               
+        let user1 = new User('Dilip',25,'dilip@gmail.com')
+        let user2 = new User('Krishnan',24,'k@gmai.com')
+        let mod = new Moderator('Berlin',24,'b@gmail.com');
+        let admin = new Admin('Rio',25,'r@gmail.com');
+    
+        user1.login();
+        user1.logout();
+
+        mod.addCoins(user1,5);
+        mod.addCoins(user2,5);
+        mod.removeCoins(user2,3);
+
+        admin.addCourse(user1,'Javascript');
+        admin.addCourse(user1,'Python');
+        admin.addCourse(user1,'AI_ML');
+        admin.deleteCourse(user1,'Javascript');
+ 
+ 
+    </script>
+</body>
+</html>
+
