@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
+    <link rel="stylesheet" href="styles.css">
+    <title>Question 3</title>
+</head>
+<body >
+    <h1>Question 3</h1>
+    <p>
+        Make a webpage that will ask the name of the user. Then will display a welcome message on the
+        webpage. Also the webpage should also have a clock. <br>
+        Using the toggle method of classList add a dark mode feature to the website
+    </p>
+    <h2> Solution </h2>
+    <h3 id="title">Hello</h3>
+    <h4> CLOCK <br></h4>
+    <h4 id="time"></h4>
+    <button id="btn">Switch to Dark Mode</button>
+ 
+
+    <script>
+        console.log("q3 solution"); 
+        const title = document.getElementById('title');
+        // const name1 = prompt("Name please ?", 'User');
+        name1 = "anantha";
+        title.innerText += ` ${name1} !!!\n`;
+
+        
+        const ctime = document.getElementById('time');
+        function clock(){
+        let date = new Date();
+        let time = date.toLocaleTimeString();
+        ctime.innerText = time;
+        } 
+        setInterval(clock,1000);
+
+        const btn = document.getElementById('btn');
+
+        btn.onclick = function changeColor(){ 
+            document.body.classList.toggle("colorred");
+  
+            if(btn.className == 'show'){
+            btn.className = '';
+            btn.innerText = "Switch to Dark Mode";
+            }
+            else{
+            btn.className = 'show';
+            btn.innerText = "Switch to Light Mode";
+            }
+        }
+    </script>
+</body>
+</html>
+

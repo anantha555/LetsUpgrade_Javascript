@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Question 2</title>
+</head>
+<body>
+    <h1>Question 2</h1>
+    <p>
+        Write a program that will display the multiplication table of a number on the webpage in a proper format. Take the input from the user. <br> <br>
+        Input - 5 <br> <br>
+        Output - 5 x 1 = 5 <br> <br>
+         5 x 2 = 10 <br> <br>
+         and so on… <br> <br>
+    </p>
+    <h2> Solution </h2>
+
+    <p id ='mtable'>
+        Input 
+
+    </p>
+
+    <script>
+        console.log("q2 solution"); 
+        
+        const mtable = document.getElementById('mtable');
+        const num = +prompt("Enter your num", '1');
+        mtable.innerText += ` -  ${num}`;
+        mtable.innerText += `\n\nOutput -`;
+        for(let i = 1 ;i <11 ; i++){
+            let sj = `${num} x ${i} = ${num*i}`; 
+            mtable.innerText +=`\n\n${sj}`;
+        } ;
+        
+    </script>
+</body>
+</html>
+

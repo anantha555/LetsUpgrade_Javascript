@@ -1,0 +1,10 @@
+.colorred {
+    background-color: black;
+    color: white;
+    font-family : 'Helvetica';
+}
+
+
+#btn.show{
+    transition: max-height 0.8s;
+}
