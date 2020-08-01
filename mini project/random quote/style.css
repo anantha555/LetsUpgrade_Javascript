@@ -1,0 +1,82 @@
+body {
+  overflow-x: hidden;
+  overflow-y: hidden; 
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  z-index: -2;
+}
+
+.wrapper {
+  background-color: red;
+}
+
+span {
+  border-radius: 100px;
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+}
+
+#content {
+  height: 45em;
+} p {
+  max-width: 30em;
+  color: white;
+  font-family:  Georgia, Garamond, Times, serif;
+  letter-spacing:0.1em;
+  text-align:center;
+  margin: 40px auto;
+  text-transform: lowercase;
+  line-height: 145%;
+  font-size: 2em;
+  font-variant: small-caps;
+}
+
+.container {
+  padding-top: 6em;
+  text-align: center;
+}
+
+#b-nav {
+  padding-bottom: 5em;
+  position: fixed;
+  width: 100%;
+  bottom: 2em;
+  margin: 0;
+  padding: 0.5em;
+  list-style-type: none;
+  text-align: center;
+  display: inline;
+ 
+} 
+
+.hold {
+  width: 100%;
+  text-align: left;
+}
+
+#gen {
+  outline: none;
+  padding-top: 5px;
+  text-decoration: none;
+  opacity: 0.6;
+  background-color: black;
+  color: white;
+  border: thin solid white;
+  height: 40px;
+  width: 100px;
+  border-radius: 2px;
+  transition: 0.5s;
+  padding-bottom: 5px;
+}
+
+#gen:hover {
+  background-color: white;
+  color: black;
+  border: thin solid black;
+  opacity: 0.8;
+}
